@@ -14,7 +14,7 @@ VPC_id = raw_input("VPC_id를 입력해주세요.")
 instance_type = raw_input("instance_type을 입력해주세요.")
 
 nginx_AMI =	'ami-0cbad1ff1711f6e1d'
-crontab_AMI = 'ami-036d344554b4b053a'
+crontab_AMI = 'ami-0f72e71543b249131'
 
 instances = ec2.create_instances(
     NetworkInterfaces=[{'SubnetId': SubnetId, 'DeviceIndex': 0, 'Groups': VPC_id}],
