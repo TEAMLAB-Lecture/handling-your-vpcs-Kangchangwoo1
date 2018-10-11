@@ -5,4 +5,8 @@ AMI_with_crontab-Kangchangwoo1 created by GitHub Classroom
 
 2. 'iniciate_computer.py'를 실행해줍니다.
 
-3. 결과값으로 나오는 id를 
+3. 결과값으로 나오는 id를 저장해둡니다. (nginx, crontab)
+
+4. crontab EC2로 접속해서, 'python starting_computer.py'를 실행해줍니다.
+
+5. 필요한 값을 입력해주면 완료됩니다.
