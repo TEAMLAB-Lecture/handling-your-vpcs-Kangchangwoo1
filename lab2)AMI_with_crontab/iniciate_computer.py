@@ -17,7 +17,7 @@ nginx_AMI =	'ami-0cbad1ff1711f6e1d'
 crontab_AMI = 'ami-0f72e71543b249131'
 
 instances = ec2.create_instances(
-    NetworkInterfaces=[{'SubnetId': SubnetId, 'DeviceIndex': 0, 'Groups': VPC_id}],
+    NetworkInterfaces=[{'SubnetId': SubnetId,'DeviceName':  'NGINX', 'VirtualName': 'NGINX', 'DeviceIndex': 0, 'Groups': VPC_id}],
 	ImageId=nginx_AMI,
 	MinCount=1,
 	MaxCount=4,
@@ -25,7 +25,7 @@ instances = ec2.create_instances(
 	InstanceType=instance_type)
 
 instances = ec2.create_instances(
-    NetworkInterfaces=[{'SubnetId':SubnetId, 'DeviceIndex': 0, 'Groups': VPC_id}],
+    NetworkInterfaces=[{'SubnetId':SubnetId,'DeviceName':  'CRON_TAB', 'VirtualName': 'CRON_TAB', 'DeviceIndex': 0, 'Groups': VPC_id}],
 	ImageId=crontab_AMI,
 	MinCount=1,
 	MaxCount=4,
